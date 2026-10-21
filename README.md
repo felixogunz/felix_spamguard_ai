@@ -54,30 +54,22 @@ Keep the dataset's accompanying README and review its usage and attribution term
 
 ### 1. Open the project
 
-```bash
 cd ~/projects/felix-spamguard-ai
-```
 
 ### 2. Create and activate a virtual environment
 
-```bash
 python3 -m venv .venv
 source .venv/bin/activate
-```
 
 ### 3. Install dependencies
 
-```bash
 python -m pip install -r requirements.txt
-```
 
 ### 4. Prepare the dataset
 
 After downloading and extracting the dataset, run:
 
-```bash
 python -m src.prepare_uci_data
-```
 
 The cleaned dataset is saved to:
 
@@ -85,25 +77,19 @@ The cleaned dataset is saved to:
 
 ### 5. Train the model
 
-```bash
 python -m src.train
-```
 
 The training script evaluates the model and saves the trained pipeline and metrics in the `models/` directory.
 
 ### 6. Compare models
 
-```bash
 python -m src.compare_models
-```
 
 This compares logistic regression with Multinomial Naive Bayes using the same train-test split.
 
 ### 7. Start the application
 
-```bash
 uvicorn src.api:app --reload
-```
 
 Open the following addresses in your browser:
 
@@ -157,21 +143,15 @@ These results come from one test split of the UCI dataset. Performance on new me
 
 Run the automated tests:
 
-```bash
 pytest -v
-```
 
 Check Python syntax:
 
-```bash
 python -m compileall -q src tests
-```
 
 Check installed dependencies:
 
-```bash
 python -m pip check
-```
 
 The current test suite covers the dashboard, API health, input validation, and evaluation-metric structure.
 

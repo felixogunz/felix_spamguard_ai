@@ -10,7 +10,7 @@ def test_dashboard_returns_html():
     response = client.get("/")
 
     assert response.status_code == 200
-    assert "SpamGuard AI" in response.text
+    assert "Felix SpamGuard<span> AI</span>" in response.text
 
 
 def test_health_endpoint_returns_status():
