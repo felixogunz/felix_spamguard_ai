@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SpamGuard AI</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <a class="brand" href="/">✳ Felix SpamGuard<span> AI</span></a>
+
+            <p class="nav-heading">WORKSPACE</p>
+            <a class="nav-link active" href="/">◈ Overview</a>
+            <a class="nav-link" href="#scanner">⌁ Message scanner</a>
+            <a class="nav-link" href="#performance">▥ Model performance</a>
+
+            <div class="sidebar-status">
+                <span class="status-dot" id="status-dot"></span>
+                <div>
+                    <strong>System status</strong>
+                    <small id="status-text">Checking API...</small>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <span>Workspace / Overview</span>
+                <span class="live-label">● LIVE SYSTEM</span>
+            </header>
+
+            <section class="welcome">
+                <p class="eyebrow">INTELLIGENCE CENTER</p>
+                <h1>Your inbox,<br><span>under control.</span></h1>
+                <p>Analyze suspicious messages with explainable machine learning.</p>
+            </section>
+
+            <section class="stats-grid">
+                <article class="stat-card">
+                    <p>ACCURACY</p>
+                    <strong id="accuracy">—</strong>
+                </article>
+                <article class="stat-card">
+                    <p>SPAM PRECISION</p>
+                    <strong id="precision">—</strong>
+                </article>
+                <article class="stat-card">
+                    <p>SPAM RECALL</p>
+                    <strong id="recall">—</strong>
+                </article>
+                <article class="stat-card">
+                    <p>F1 SCORE</p>
+                    <strong id="f1">—</strong>
+                </article>
+            </section>
+
+            <section class="content-grid">
+                <article class="panel" id="scanner">
+                    <p class="eyebrow">REAL-TIME ANALYSIS</p>
+                    <h2>Message scanner</h2>
+                    <p class="muted">Paste a message to evaluate its spam risk.</p>
+
+                    <label for="message">MESSAGE CONTENT</label>
+                    <textarea id="message" maxlength="10000"
+                        placeholder="Paste an email, SMS, or message..."></textarea>
+
+                    <div class="sample-buttons">
+                        <button data-sample="Hey, are we still meeting for lunch tomorrow?">
+                            Try legitimate sample
+                        </button>
+                        <button data-sample="URGENT! Claim your free cash prize now!">
+                            Try spam sample
+                        </button>
+                    </div>
+
+                    <button id="scan-button" class="primary-button">
+                        ✳ Analyze message
+                    </button>
+
+                    <p id="error" class="error" hidden></p>
+                </article>
+
+                <article class="panel">
+                    <p class="eyebrow">MODEL OUTPUT</p>
+                    <h2>Threat assessment</h2>
+                    <div id="empty-result">
+                        <div class="empty-icon">✳</div>
+                        <h3>Ready to analyze</h3>
+                        <p class="muted">
+                            Your prediction and model signals will appear here.
+                        </p>
+                    </div>
+
+                    <div id="result" hidden>
+                        <div id="result-banner" class="result-banner">
+                            <strong id="result-label">SPAM</strong>
+                            <p id="result-description"></p>
+                        </div>
+
+                        <div class="probability-heading">
+                            <span>Spam probability</span>
+                            <strong id="probability">—</strong>
+                        </div>
+                        <div class="progress-track">
+                            <div id="probability-bar" class="progress-fill"></div>
+                        </div>
+
+                        <h3>Top model signals</h3>
+                        <div id="signals"></div>
+                        <p class="muted small">
+                            These are model feature contributions, not proof of intent.
+                        </p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="panel performance" id="performance">
+                <p class="eyebrow">EVALUATION & TRUST</p>
+                <h2>Model performance</h2>
+                <p class="muted">Metrics from the held-out test set.</p>
+
+                <div class="stats-grid performance-grid">
+                    <article class="stat-card">
+                        <p>ROC-AUC</p>
+                        <strong id="auc">—</strong>
+                    </article>
+                    <article class="stat-card">
+                        <p>TEST SAMPLES</p>
+                        <strong id="samples">—</strong>
+                    </article>
+                </div>
+
+                <p id="demo-warning" class="warning" hidden>
+                    Demo dataset detected. These results are only a software
+                    smoke test, not evidence of real-world model performance.
+                </p>
+
+                <h3>Confusion matrix</h3>
+                <p class="muted small">
+                    Rows: actual classes. Columns: predicted classes.
+                </p>
+                <div id="matrix" class="matrix"></div>
+            </section>
+
+            <footer>
+                SpamGuard AI · Explainable message classification
+                <a href="/docs">API documentation ↗</a>
+            </footer>
+        </main>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

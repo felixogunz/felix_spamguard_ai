@@ -1,0 +1,33 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python cache files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Generated model files
+models/*.joblib
+
+# Logs
+*.log
+
+# Editors and operating system files
+.vscode/
+.idea/
+.DS_Store
+
+# Downloaded and generated datasets
+data/raw/uci_sms_spam/
+data/raw/uci_sms_spam_collection.zip
+data/processed/
+
+# Generated evaluation reports
+models/metrics*.json

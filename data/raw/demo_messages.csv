@@ -1,0 +1,39 @@
+text,label
+"Hey, are we still meeting for lunch tomorrow?",ham
+"Can you send me the meeting notes?",ham
+"Your appointment is confirmed for Monday.",ham
+"Thanks for helping me with the project.",ham
+"I will call you when I get home.",ham
+"Please review the report before Friday.",ham
+"Are you available for a call this afternoon?",ham
+"Happy birthday, have a wonderful day.",ham
+"Your package has been delivered.",ham
+"Can we move our meeting to 3 pm?",ham
+"Remember to bring your ID to the office.",ham
+"Your verification code is 482193.",ham
+"Thanks, I received your email.",ham
+"The team lunch is scheduled for Thursday.",ham
+"Please find the invoice attached.",ham
+"I am running ten minutes late.",ham
+"Could you help me debug this Python function?",ham
+"Your order has shipped and will arrive tomorrow.",ham
+"Congratulations! You have won a free prize. Claim now!",spam
+"URGENT! You won cash. Click this link to claim your reward!",spam
+"WINNER! Claim your free gift today!",spam
+"Earn money fast from home. Sign up now!",spam
+"Your account is suspended. Verify your password immediately!",spam
+"FREE entry in our weekly competition. Text WIN now!",spam
+"Act now to receive a guaranteed cash reward!",spam
+"You have been selected for a special offer. Claim your prize!",spam
+"Lowest price guaranteed! Buy now and save 90 percent!",spam
+"Confirm your bank details immediately to avoid account closure.",spam
+"Get rich quickly with this secret investment opportunity!",spam
+"Congratulations, you have been chosen to receive a free vacation!",spam
+"Claim your exclusive bonus today. Offer expires soon!",spam
+"Your loan is approved instantly. Apply now!",spam
+"Make thousands every week. Start today!",spam
+"Click now to unlock your reward and claim free cash.",spam
+"Winner! You have won a brand new phone. Call now!",spam
+"Free gift card waiting for you. Redeem immediately!",spam
+"Final warning: verify your details now.",spam
+"Special promotion! Buy one get three free!",spam
