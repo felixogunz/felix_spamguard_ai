@@ -15,6 +15,7 @@ __pycache__/
 
 # Generated model files
 models/*.joblib
+!models/spamguard_pipeline.joblib
 
 # Logs
 *.log
@@ -31,3 +32,4 @@ data/processed/
 
 # Generated evaluation reports
 models/metrics*.json
+!models/metrics.json
